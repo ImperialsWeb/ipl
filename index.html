@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperials Guild - Official Homepage</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+
+
+    
+<style>
+
+    /*Modifier la vidéo guilde*/
+.hero {
+  position: relative; /* pour que les boutons restent au-dessus */
+  z-index: 1;
+}
+
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* tu peux mettre 80vh ou 100vh pour un effet plus immersif */
+  overflow: hidden;
+  margin-top: -800px; /* remonte la vidéo derrière la Hero */
+}
+
+.video-section video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* centre la vidéo parfaitement */
+  min-width: 100%;   /* agrandit la largeur pour “zoomer” */
+  min-height: 100%;  /* agrandit la hauteur pour couvrir toute la section */
+  object-fit: cover; /* garde les proportions et recadre */
+  z-index: -1;       /* vidéo derrière la Hero */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;       /* page prend toute la hauteur de l’écran */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hero, .video-section {
+  flex: 1;                  /* prend tout l’espace disponible */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* centre verticalement le contenu */
+  align-items: center;       /* centre horizontalement */
+  position: relative;        /* pour la vidéo */
+}
+
+.video-section video {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 150%;           /* zoom léger pour couvrir tout */
+  min-height: 150%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+footer {
+  margin-top: auto;          /* pousse le footer en bas */
+}
+
+
+
+</style>  
+
+<body>
+    <div class="bg-animation"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <img src="https://img.recraft.ai/esTRdlS2AlLQZOFSDpfKdn7_oMnjp1d-Q5M6GWqsrsA/raw:1/plain/abs://prod/images/4277a09e-c4e7-4da1-ad48-6bd395ca82a4" alt="Imperials IPL" class="logo">
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="https://discord.gg/4XG9NFEW">Discord</a></li>
+            <li><a href="https://sao-minecraft-ku9a.vercel.app/menu.html">Wiki</a></li>
+            <li><a href="membres.html">Membres</a></li>
+            <li><a href="histoire.html">Histoire</a></li>
+            <li><a href="/infos/home.html">infos</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+     
+    <section class="hero" id="home">
+        <p>Forgez votre destin au sein de l'imperials.</p>
+        <p href="https://discord.gg/4XG9NFEW" class="cta-button">Rejoins nous</p>
+    </section>
+   
+
+
+    <!-- Vidéo Section -->
+    <section class="video-section">
+    <video autoplay muted loop playsinline>
+    <source src="sao.mp4" type="video/mp4">
+    Votre navigateur ne supporte pas les vidéos HTML5.
+     </video>
+    </section>
+
+ 
+   
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Imperials IPL. All rights reserved.</p>
+        <p>Dominate SAO France.</p>
+    </footer>
+
+</body>
+</html>
+
+
+

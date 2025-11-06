@@ -1,0 +1,263 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a1f 50%, #0a0a0a 100%);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 2px solid rgba(236, 72, 153, 0.3);
+        }
+
+        .logo {
+            height: 60px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: #ec4899;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #ec4899, #a855f7);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 100px;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(90deg, #ec4899, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #aaa;
+            margin-bottom: 2rem;
+        }
+
+        /* Discord Section */
+        .discord-section {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .discord-card {
+            background: linear-gradient(135deg, rgba(20, 20, 30, 0.8), rgba(40, 20, 50, 0.6));
+            border: 2px solid rgba(236, 72, 153, 0.3);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(236, 72, 153, 0.2);
+        }
+
+        .discord-card img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Wiki Section */
+        .wiki-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            background: linear-gradient(90deg, #ec4899, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+        }
+
+        .wiki-card {
+            background: linear-gradient(135deg, rgba(20, 20, 30, 0.8), rgba(40, 20, 50, 0.6));
+            border: 2px solid rgba(236, 72, 153, 0.3);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(236, 72, 153, 0.2);
+            transform: perspective(1000px) rotateX(2deg);
+            transition: transform 0.3s;
+        }
+
+        .wiki-card:hover {
+            transform: perspective(1000px) rotateX(0deg) scale(1.02);
+        }
+
+        .wiki-card img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Player Section */
+        .player-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .player-card {
+            background: linear-gradient(135deg, rgba(20, 20, 30, 0.8), rgba(40, 20, 50, 0.6));
+            border: 2px solid rgba(236, 72, 153, 0.3);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(236, 72, 153, 0.2);
+            transform: perspective(1000px) rotateY(-2deg);
+            transition: transform 0.3s;
+        }
+
+        .player-card:hover {
+            transform: perspective(1000px) rotateY(0deg) scale(1.02);
+        }
+
+        .player-card img {
+            width: 100%;
+            display: block;
+        }
+
+        /* CTA Buttons */
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: linear-gradient(90deg, #ec4899, #a855f7);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(236, 72, 153, 0.4);
+            margin: 0.5rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(236, 72, 153, 0.6);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            border-top: 2px solid rgba(236, 72, 153, 0.3);
+            background: rgba(10, 10, 10, 0.8);
+        }
+
+        footer p {
+            color: #888;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+
+        .bg-animation::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, #ec4899, transparent);
+            top: -250px;
+            left: -250px;
+            animation: float 15s infinite;
+        }
+
+        .bg-animation::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, #a855f7, transparent);
+            bottom: -200px;
+            right: -200px;
+            animation: float 12s infinite reverse;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(100px, 100px); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .logo {
+                height: 40px;
+            }
+        }
